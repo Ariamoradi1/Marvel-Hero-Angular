@@ -18,8 +18,5 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class signUp {
     title = 'myApp';
     emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  myUser = 7
   matcher = new MyErrorStateMatcher();
-  longText = 4
-  result = this.myUser + this.longText
   }
