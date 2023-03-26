@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { Router, RouterOutlet, RouterModule } from '@angular/router';
 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -16,7 +17,30 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./signUp.component.css']
 })
 export class signUp {
-    title = 'myApp';
+    name : string = ''
+    email : string = ''
+    password : string = ''
     emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-  matcher = new MyErrorStateMatcher();
+    nameControl = new FormControl('', [Validators.required, Validators.maxLength(4)])
+    matcher = new MyErrorStateMatcher();
+
+  public inputHandler(e: Event) {
+   this.name = (<HTMLInputElement>e.target).value
+  }
+  public emailHandler(e: Event) {
+   this.email = (<HTMLInputElement>e.target).value
+  }
+  public passwordHandler(e: Event) {
+   this.password = (<HTMLInputElement>e.target).value
+  }
+  constructor(private router : Router) {}
+  onSubmit() {
+    if(this.name.length > 4 || this.password.length > 8) {
+    this.router.navigateByUrl('/home')
+    }else{
+      alert('error')
+    }
+  }
+
+
   }

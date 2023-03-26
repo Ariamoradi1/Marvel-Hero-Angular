@@ -17,9 +17,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {
+  RouterModule,
+  Routes
+} from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
-
+const routes: Routes = [
+  { path: '', component: signUp },
+  {path: 'home', component: HomeComponent}
+];
 
 
 @NgModule({
@@ -27,6 +35,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     AppComponent,
     signUp,
     NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +51,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatButtonModule,
     MatCardModule,
     MatDividerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

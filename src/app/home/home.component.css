@@ -1,0 +1,17 @@
+.example-card {
+  max-width: 400px;
+  margin-left: 0px;
+  height: fit-content;
+  margin-top: 20px;
+}
+.heroes{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.thor{
+  height: 225px;
+}
+a{
+  text-decoration: none;
+}
