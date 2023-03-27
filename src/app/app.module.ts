@@ -22,6 +22,7 @@ import {
   Routes
 } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ComicsComponent } from './comics/comics.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
     signUp,
     NavbarComponent,
     HomeComponent,
+    ComicsComponent,
   ],
   imports: [
     BrowserModule,
