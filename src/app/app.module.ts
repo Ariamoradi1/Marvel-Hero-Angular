@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {
   RouterModule,
   Routes
@@ -54,6 +55,7 @@ const routes: Routes = [
     MatCardModule,
     MatDividerModule,
     MatProgressBarModule,
+    MatSlideToggleModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],

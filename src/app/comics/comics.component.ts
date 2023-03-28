@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./comics.component.css']
 })
 export class ComicsComponent {
+  users : any
+  names = 'aria'
+
   comics = [
     {id:1, img:'../assets/comic1.jpg',path:'https://www.marvel.com/comics/issue/107676/women_of_marvel_2023_1', name:'Women of Marvel #1',writer:'Durso'},
     {id:2, img:'../assets/comic2.jpg',path:'https://www.marvel.com/comics/issue/107440/she-hulk_2022_11', name:'She-Hulk #11',writer:'Rowell, Genolet'},

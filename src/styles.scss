@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.dark-mode{
+  background-color: #141413;
+  color: #fff;
+}
+
+.dark-mode mat-card{
+  background-color: #000000;
+  color: #fff;
+}
+.dark-mode a {
+  color: #fff;
+}
+.dark-mode .a-tag{
+  color: #fff;
+}
+.dark-mode mat-toolbar-row{
+background-color: #000000;
+color: #fff;
+}
+.dark-mode mat-card-subtitle{
+  color: white;
+}
+.dark-mode span {
+  color: #fff;
+}

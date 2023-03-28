@@ -1,10 +1,11 @@
 <h1 style="text-align: center; margin-top: 30px; font-size: 25px;">Comics!</h1>
 <div class="comics">
   <div *ngFor="let comic of comics" class="this-comic">
-    <a href={{comic.path}}>
+    <a class="a-tag" href={{comic.path}}>
     <img class="comic-img" [src]="comic.img" alt="comic">
     <h3 style="margin-top: 15px;">{{comic.name}}</h3>
     <p>{{comic.writer}}</p>
     </a>
   </div>
 </div>
+<p *ngFor="let user of users">{{user.name}} - {{names}}</p>
