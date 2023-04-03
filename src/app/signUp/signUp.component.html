@@ -1,13 +1,13 @@
-<h1 style="text-align: center; margin-top:20px;">Marvel Hero</h1>
+<h1 style="text-align: center; margin-top:20px;">{{ 'signup.marvel-hero' | translate}}</h1>
 <div class="mycard">
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title style="text-align: center;">signUp</mat-card-title>
+    <mat-card-title style="text-align: center;">{{ 'signup.sign' | translate}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <form class="example-form">
       <mat-form-field class="example-full-width">
-        <mat-label>User Name</mat-label>
+        <mat-label>{{ 'signup.username' | translate}}</mat-label>
         <input type="text" (input)="inputHandler($event)" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
           >
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -18,7 +18,7 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
+        <mat-label>{{ 'signup.email' | translate}}</mat-label>
         <input type="Email" (input)="emailHandler($event)" matInput
                placeholder="Ex. pat@example.com">
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -29,7 +29,7 @@
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <mat-label>Password</mat-label>
+        <mat-label>{{ 'signup.password' | translate}}</mat-label>
         <input type="Password" (input)="passwordHandler($event)" matInput
         >
         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -43,7 +43,7 @@
     <mat-divider></mat-divider>
   </mat-card-content>
   <mat-card-actions>
-  <button (click)="onSubmit()" mat-button>signUp</button>
+  <button (click)="onSubmit()" mat-button>{{ 'signup.button' | translate}}</button>
   </mat-card-actions>
   <mat-card-footer>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
