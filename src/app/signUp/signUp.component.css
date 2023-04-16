@@ -1,27 +1,2 @@
-.input-container{
-  display: flex;
-  justify-content: space-around;
-}
 
-.example-form{
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.mycard{
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.example-card{
-  width: 400px;
-}
-
-.inputs{
-    width: 500px;
-    height: 300px;
-    margin-top: 80px;
-  }
 

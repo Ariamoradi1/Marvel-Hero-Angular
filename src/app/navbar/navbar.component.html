@@ -2,11 +2,11 @@
     <mat-toolbar color="primary">
       <mat-toolbar-row>
         <span>{{'signup.marvel-hero' | translate}}</span>
-        <span class="example-spacer"></span>
-        <button class="en-button" (click)="useLanguage('en')">en</button>
-        <button class="fa-button" (click)="useLanguage('fa')">fa</button>
+        <span class="flex-auto"></span>
+        <button class="mr-4" (click)="useLanguage('en')">en</button>
+        <button class="mr-3" (click)="useLanguage('fa')">fa</button>
         <mat-slide-toggle (click)='toggleDarkMode()'></mat-slide-toggle>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
       </mat-toolbar-row>

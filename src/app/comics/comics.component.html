@@ -1,73 +1,10 @@
-<h1 style="text-align: center; margin-top: 30px; font-size: 25px;">{{'comics.comic' | translate}}</h1>
-<div class="comics">
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/107676/women_of_marvel_2023_1'>
-    <img class="comic-img" src="../../assets/comic1.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name1' | translate}}</h3>
+<h1 class="text-center text-lg" style="margin-top: 45px;">{{'comics.comic' | translate}}</h1>
+<div class="mt-20 grid grid-cols-5 grid-rows-2 md:grid grid-rows-2 grid-rows-2">
+  <div *ngFor="let ser of series" class="ml-5">
+    <a href={{ser.urls[0].url}}>
+    <img class='h-96 w-60 shadow-2xl transition-transform duration-5500 ease-in-out transform hover:scale-110' src={{ser.thumbnail.path}}.{{ser.thumbnail.extension}} alt="comic">
+    <h3 style="margin-top:20px" class="hover:text-red-500">{{ser.title}}</h3>
     <p>{{'comics.writer1' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/107440/she-hulk_2022_11'>
-    <img class="comic-img" src="../../assets/comic2.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name2' | translate}}</h3>
-    <p>{{'comics.writer2' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/106473/wasp_2023_3'>
-    <img class="comic-img" src="../../assets/comic3.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name3' | translate}}</h3>
-    <p>{{'comics.writer3' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/105925/avengers_rage_of_ultron_-_marvel_tales_2023_1'>
-    <img class="comic-img" src="../../assets/comic4.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name4' | translate}}</h3>
-    <p>{{'comics.writer4' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/105918/avengers_facsimile_edition_2023_9'>
-    <img class="comic-img" src="../../assets/comic5.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name5' | translate}}</h3>
-    <p>{{'comics.writer5' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/105871/storm_the_brotherhood_of_mutants_2023_2'>
-    <img class="comic-img" src="../../assets/comic6.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name6' | translate}}</h3>
-    <p>{{'comics.writer6' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/105848/doctor_strange_2023_1'>
-    <img class="comic-img" src="../../assets/comic7.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name7' | translate}}</h3>
-    <p>{{'comics.writer7' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/105616/carnage_2022_11'>
-    <img class="comic-img" src="../../assets/comic8.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name8' | translate}}</h3>
-    <p>{{'comics.writer8' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/103063/star_wars_darth_vader_2020_32'>
-    <img class="comic-img" src="../../assets/comic9.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name9' | translate}}</h3>
-    <p>{{'comics.writer9' | translate}}</p>
-    </a>
-  </div>
-  <div class="this-comic">
-    <a class="a-tag" href='https://www.marvel.com/comics/issue/103036/spider-man_the_lost_hunt_2022_5'>
-    <img class="comic-img" src="../../assets/comic10.jpg" alt="comic">
-    <h3 style="margin-top: 15px;">{{'comics.name10' | translate}}</h3>
-    <p>{{'comics.writer10' | translate}}</p>
     </a>
   </div>
 </div>

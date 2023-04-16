@@ -1,105 +1,15 @@
-<h1 style="text-align: center;">{{'home.hero' | translate}}</h1>
-<div class="heroes">
-<mat-card class="example-card">
+<h1 class="text-center">{{'home.hero' | translate}}</h1>
+<div class="flex justify-between flex-wrap">
+<mat-card *ngFor="let data of datas" class="max-w-sm ml-0 h-fit mt-20 p-2">
   <mat-card-header>
-    <img mat-card-avatar src="../../assets/spider.jpeg" class="example-header-image">
-    <mat-card-title>{{"heroes.name1" | translate}}</mat-card-title>
+    <img mat-card-avatar src={{data.thumbnail.path}}.{{data.thumbnail.extension}} class="example-header-image">
+    <mat-card-title>{{data.name}}</mat-card-title>
     <mat-card-subtitle>{{'signup.marvel-hero' | translate}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image style="height: 225px;" src='../../assets/spider.jpeg'>
-  <mat-card-content>
-    <p>
-      {{'heroes.title1' | translate}}
-    </p>
-  </mat-card-content>
+  <img mat-card-image class="h-96" src={{data.thumbnail.path}}.{{data.thumbnail.extension}}>
   <mat-card-actions>
     <button mat-button>{{'heroes.like' | translate}}</button>
-   <a href="https://www.marvel.com/characters/spider-man-peter-parker"> <button mat-button>{{'heroes.mar' | translate}}</button></a>
-  </mat-card-actions>
-</mat-card>
-<mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="../../assets/hulk.webp" class="example-header-image">
-    <mat-card-title>{{"heroes.name2" | translate}}</mat-card-title>
-    <mat-card-subtitle>{{'signup.marvel-hero' | translate}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image style="height: 225px;" src='../../assets/hulk.webp'>
-  <mat-card-content>
-    <p>
-      {{'heroes.title2' | translate}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>{{'heroes.like' | translate}}</button>
-   <a href="https://www.marvel.com/characters/hulk-bruce-banner"> <button mat-button>{{'heroes.mar' | translate}}</button></a>
-  </mat-card-actions>
-</mat-card>
-<mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="../../assets/thorprof.webp" class="example-header-image">
-    <mat-card-title>{{"heroes.name3" | translate}}</mat-card-title>
-    <mat-card-subtitle>{{'signup.marvel-hero' | translate}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image style="height: 225px;" src='../../assets/thor.jpeg'>
-  <mat-card-content>
-    <p>
-      {{'heroes.title3' | translate}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>{{'heroes.like' | translate}}</button>
-   <a href="https://www.marvel.com/characters/thor-thor-odinson"> <button mat-button>{{'heroes.mar' | translate}}</button></a>
-  </mat-card-actions>
-</mat-card>
-<mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="../../assets/capitan.jpg" class="example-header-image">
-    <mat-card-title>{{"heroes.name4" | translate}}</mat-card-title>
-    <mat-card-subtitle>{{'signup.marvel-hero' | translate}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image style="height: 225px;" src='../../assets/capitan.jpg'>
-  <mat-card-content>
-    <p>
-      {{'heroes.title4' | translate}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>{{'heroes.like' | translate}}</button>
-   <a href="https://www.marvel.com/characters/captain-america-steve-rogers"> <button mat-button>{{'heroes.mar' | translate}}</button></a>
-  </mat-card-actions>
-</mat-card>
-<mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="../../assets/iron.jpg" class="example-header-image">
-    <mat-card-title>{{"heroes.name5" | translate}}</mat-card-title>
-    <mat-card-subtitle>{{'signup.marvel-hero' | translate}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image style="height: 225px;" src='../../assets/iron.jpg'>
-  <mat-card-content>
-    <p>
-      {{'heroes.title5' | translate}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>{{'heroes.like' | translate}}</button>
-   <a href="https://www.marvel.com/characters/iron-man-tony-stark"> <button mat-button>{{'heroes.mar' | translate}}</button></a>
-  </mat-card-actions>
-</mat-card>
-<mat-card class="example-card">
-  <mat-card-header>
-    <img mat-card-avatar src="../../assets/captan.jpg" class="example-header-image">
-    <mat-card-title>{{"heroes.name6" | translate}}</mat-card-title>
-    <mat-card-subtitle>{{'signup.marvel-hero' | translate}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image style="height: 225px;" src='../../assets/captan.jpg'>
-  <mat-card-content>
-    <p>
-      {{'heroes.title6' | translate}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>{{'heroes.like' | translate}}</button>
-   <a href="https://www.marvel.com/characters/captain-marvel-carol-danvers/in-comics"> <button mat-button>{{'heroes.mar' | translate}}</button></a>
+   <a href={{data.urls[0].url}}> <button mat-button>{{'heroes.mar' | translate}}</button></a>
   </mat-card-actions>
 </mat-card>
 </div>

@@ -1,11 +1,11 @@
-<h1 style="text-align: center; margin-top:20px;">{{ 'signup.marvel-hero' | translate}}</h1>
-<div class="mycard">
-<mat-card class="example-card">
+<h1 class="mt-20 text-center">{{ 'signup.marvel-hero' | translate}}</h1>
+<div class="mt-20 flex justify-center">
+<mat-card class="w-1/3">
   <mat-card-header>
-    <mat-card-title style="text-align: center;">{{ 'signup.sign' | translate}}</mat-card-title>
+    <mat-card-title class="text-center">{{ 'signup.sign' | translate}}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="example-form">
+    <form class="flex flex-col p-5">
       <mat-form-field class="example-full-width">
         <mat-label>{{ 'signup.username' | translate}}</mat-label>
         <input type="text" (input)="inputHandler($event)" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
@@ -17,7 +17,7 @@
          User Name is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
+      <mat-form-field>
         <mat-label>{{ 'signup.email' | translate}}</mat-label>
         <input type="Email" (input)="emailHandler($event)" matInput
                placeholder="Ex. pat@example.com">
@@ -28,7 +28,7 @@
          Email is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
+      <mat-form-field>
         <mat-label>{{ 'signup.password' | translate}}</mat-label>
         <input type="Password" (input)="passwordHandler($event)" matInput
         >
