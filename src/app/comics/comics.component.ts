@@ -7,6 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ComicsComponent {
   series:any
+  myArray : string[] = ['sara','kazem','ali']
   constructor(private http : HttpClient) {}
 
   ngOnInit(){
