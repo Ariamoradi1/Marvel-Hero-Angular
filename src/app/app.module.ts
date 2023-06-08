@@ -24,11 +24,13 @@ import { HomeComponent } from './home/home.component';
 import { ComicsComponent } from './comics/comics.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
   { path: '', component: signUp },
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 
@@ -39,6 +41,7 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     ComicsComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
