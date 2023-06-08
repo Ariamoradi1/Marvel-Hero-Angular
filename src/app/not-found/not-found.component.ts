@@ -7,9 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent {
+  timer : any
    constructor(private route : Router) {}
 
-   navigate(){
+   ngOnInit(){
+   setInterval(() => {
     this.route.navigate(['home'])
+    },10000)
    }
 }

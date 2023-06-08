@@ -59,6 +59,6 @@
       "writer10": "J.M. DeMatteis, Messias"
     },
     "not-found":{
-      "button": "Go To Home"
+      "message": "You will be redirect to the home page in ten seconds"
     }
 }
