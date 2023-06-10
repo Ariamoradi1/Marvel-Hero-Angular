@@ -28,9 +28,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  { path: '', component: signUp },
+  {path: '', component: signUp},
   {path: 'home', component: HomeComponent},
-  {path: '**', component: NotFoundComponent}
+  {path: 'error-404', component: NotFoundComponent},
+  {path: '**', redirectTo:'error-404'}
 ];
 
 
