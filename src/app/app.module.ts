@@ -25,6 +25,7 @@ import { ComicsComponent } from './comics/comics.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 const routes: Routes = [
@@ -60,6 +61,7 @@ const routes: Routes = [
     MatDividerModule,
     MatProgressBarModule,
     MatSlideToggleModule,
+    MatSelectModule,
     RouterModule.forRoot(routes),
     TranslateModule.forRoot({
       loader: {

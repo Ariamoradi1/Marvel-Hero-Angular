@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent {
   isDarkMode = false;
+  isOpen : boolean = false;
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode
 
@@ -20,5 +21,11 @@ export class NavbarComponent {
   }
   useLanguage(lan : any) {
     this.translate.use(lan)
+  }
+  clickMenuHandler(){
+    this.isOpen = true
+  }
+  closeHandler(){
+    this.isOpen = false
   }
 }

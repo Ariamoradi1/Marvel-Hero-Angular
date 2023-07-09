@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Router, RouterOutlet, RouterModule } from '@angular/router';
+import Swal from 'sweetalert2'
 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -17,30 +18,22 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./signUp.component.css']
 })
 export class signUp {
-    name : string = ''
-    email : string = ''
-    password : string = ''
-    emailFormControl = new FormControl('', [Validators.required, Validators.email]);
-    nameControl = new FormControl('', [Validators.required, Validators.maxLength(4)])
-    matcher = new MyErrorStateMatcher();
 
-  public inputHandler(e: Event) {
-   this.name = (<HTMLInputElement>e.target).value
-  }
-  public emailHandler(e: Event) {
-   this.email = (<HTMLInputElement>e.target).value
-  }
-  public passwordHandler(e: Event) {
-   this.password = (<HTMLInputElement>e.target).value
-  }
+    emailFormControl = new FormControl('', [Validators.pattern('[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+')]);
+    matcher = new MyErrorStateMatcher();
+    userNameControl = new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9_-]{3,15}$')])
+    passwordControl = new FormControl('', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$')])
+
   constructor(private router : Router) {}
   onSubmit() {
-    if(this.name.length > 4 || this.password.length > 8) {
-    this.router.navigateByUrl('/home')
+    if (!this.emailFormControl.valid || !this.userNameControl.valid || !this.passwordControl.valid) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+      })
     }else{
-      alert('error')
+        this.router.navigateByUrl('/home')
     }
   }
-
-
-  }
+}

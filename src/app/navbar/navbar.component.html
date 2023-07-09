@@ -3,14 +3,26 @@
       <mat-toolbar-row>
         <span>{{'signup.marvel-hero' | translate}}</span>
         <span class="flex-auto"></span>
-        <button class="mr-4" (click)="useLanguage('en')">en</button>
-        <button class="mr-3" (click)="useLanguage('fa')">fa</button>
+        <mat-form-field class="mt-6 mr-3">
+          <mat-label>Select Language</mat-label>
+          <mat-select>
+            <mat-option (click)="useLanguage('en')">
+              English
+            </mat-option>
+            <mat-option (click)="useLanguage('fa')">
+              Farsi
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
         <mat-slide-toggle (click)='toggleDarkMode()'></mat-slide-toggle>
-        <button mat-icon-button aria-label="Example icon-button with menu icon">
+        <button (click)="clickMenuHandler()" mat-icon-button aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
       </mat-toolbar-row>
-
-
     </mat-toolbar>
 </p>
+<div class="w-full h-[300px]" *ngIf="isOpen">
+  <p>hello user</p>
+  <br>
+  <p class="cursor-pointer" (click)="closeHandler()">close</p>
+</div>
