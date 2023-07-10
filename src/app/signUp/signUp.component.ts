@@ -18,10 +18,10 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./signUp.component.css']
 })
 export class signUp {
-
+    isLoading : boolean = false
     emailFormControl = new FormControl('', [Validators.pattern('[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+')]);
     matcher = new MyErrorStateMatcher();
-    userNameControl = new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9_-]{3,15}$')])
+    userNameControl = new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9_-]{4,15}$')])
     passwordControl = new FormControl('', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$')])
 
   constructor(private router : Router) {}
@@ -33,6 +33,7 @@ export class signUp {
         text: 'Something went wrong!',
       })
     }else{
+        this.isLoading = true
         this.router.navigateByUrl('/home')
     }
   }

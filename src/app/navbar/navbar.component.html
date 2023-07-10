@@ -4,12 +4,12 @@
         <span>{{'signup.marvel-hero' | translate}}</span>
         <span class="flex-auto"></span>
         <mat-form-field class="mt-6 mr-3">
-          <mat-label>Select Language</mat-label>
+          <mat-label>{{"select.lan" | translate}}</mat-label>
           <mat-select>
             <mat-option (click)="useLanguage('en')">
               English
             </mat-option>
-            <mat-option (click)="useLanguage('fa')">
+            <mat-option (click)="useLanguageFarsi('fa')">
               Farsi
             </mat-option>
           </mat-select>

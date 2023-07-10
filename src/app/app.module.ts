@@ -26,7 +26,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const routes: Routes = [
   {path: '', component: signUp},
@@ -61,6 +61,7 @@ const routes: Routes = [
     MatDividerModule,
     MatProgressBarModule,
     MatSlideToggleModule,
+    MatProgressSpinnerModule,
     MatSelectModule,
     RouterModule.forRoot(routes),
     TranslateModule.forRoot({

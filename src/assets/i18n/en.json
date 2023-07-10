@@ -60,5 +60,9 @@
     },
     "not-found":{
       "message": "You will be redirect to the home page in ten seconds"
+    },
+    "select":{
+      "lan": "Select Language"
     }
+
 }

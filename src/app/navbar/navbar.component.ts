@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavbarComponent {
   isDarkMode = false;
   isOpen : boolean = false;
+  toggleDirection : boolean = false
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode
 
@@ -21,9 +22,14 @@ export class NavbarComponent {
   }
   useLanguage(lan : any) {
     this.translate.use(lan)
+    document.getElementsByTagName('body')[0].setAttribute('dir', 'ltr');
+  }
+  useLanguageFarsi(lan : any){
+    this.translate.use(lan)
+    document.getElementsByTagName('body')[0].setAttribute('dir', 'rtl');
   }
   clickMenuHandler(){
-    this.isOpen = true
+    this.isOpen = !this.isOpen
   }
   closeHandler(){
     this.isOpen = false
