@@ -3,6 +3,7 @@ import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/form
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Router, RouterOutlet, RouterModule } from '@angular/router';
 import Swal from 'sweetalert2'
+import {of, map, filter, interval, take, Observable, from} from 'rxjs'
 
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -36,5 +37,15 @@ export class signUp {
         this.isLoading = true
         this.router.navigateByUrl('/home')
     }
+
+    const arr : number[] = [5,4,3,3]
+    from(arr).pipe(map((item : number) => item + 2))
+    .subscribe((v : number) => console.log('value', v))
+
+    const numbers : Observable<number> = interval(1000);
+
+    const takeFourNumbers = numbers.pipe(take(4));
+
+    takeFourNumbers.subscribe(x => console.log('Next: ', x));
   }
 }
