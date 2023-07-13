@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { baseUrl,limit,timeSamp,apiKey,hashUrl,comicBaseUrl,comicLimit } from './Api/Api';
+import { baseUrl,limit,timeSamp,apiKey,hashUrl,comicBaseUrl,comicLimit } from './Api/api';
 
 @Injectable({
   providedIn: 'root'
