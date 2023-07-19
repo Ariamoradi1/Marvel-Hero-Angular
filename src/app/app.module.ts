@@ -27,10 +27,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: '', component: signUp},
-  {path: 'home', component: HomeComponent},
+  {path: 'login', component: signUp},
+  {path: '', component: HomeComponent, canActivate:[AuthGuard]},
   {path: 'error-404', component: NotFoundComponent},
   {path: '**', redirectTo:'error-404'}
 ];
