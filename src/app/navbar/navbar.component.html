@@ -3,6 +3,7 @@
       <mat-toolbar-row>
         <span>{{'signup.marvel-hero' | translate}}</span>
         <span class="flex-auto"></span>
+        <div class="max-md:hidden">
         <mat-form-field class="mt-6 mr-3">
           <mat-label>{{"select.lan" | translate}}</mat-label>
           <mat-select>
@@ -14,15 +15,28 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
+        </div>
         <mat-slide-toggle (click)='toggleDarkMode()'></mat-slide-toggle>
         <button (click)="clickMenuHandler()" mat-icon-button aria-label="Example icon-button with menu icon">
+          <div class="hidden max-md:inline-block">
           <mat-icon>menu</mat-icon>
+          </div>
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
 </p>
-<div class="w-full h-[300px]" *ngIf="isOpen">
-  <p>hello user</p>
-  <br>
-  <p class="cursor-pointer" (click)="closeHandler()">close</p>
+<div class="w-full h-[300px] flex flex-col" *ngIf="isOpen">
+  <div class="flex justify-center">
+    <mat-form-field class="mt-6 mr-3">
+      <mat-label>{{"select.lan" | translate}}</mat-label>
+      <mat-select>
+        <mat-option (click)="useLanguage('en')">
+        {{"select.en" | translate}}
+        </mat-option>
+        <mat-option (click)="useLanguageFarsi('fa')">
+          {{"select.fa" | translate}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
 </div>
